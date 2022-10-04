@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="/css/manage.css">
+</head>
+
+
+<div class="container">
+    <div class="post-list">
+        {{#each listPost}}
+            <a class="post" href="/manage/{{this.id}}">
+                <div class="post-img">
+                    <img src={{this.image}} alt="Image">
+                </div>
+                <div class="post-content">
+                    <h3 class="post-name">{{this.title}}</h3>
+                    <h4 class="post-des">{{this.description}}</h4>
+                </div>
+            </a>
+        {{/each}}
+    </div>
+
+    <form class="info" method="POST">
+        <div class="input-layout">
+            <label for="id" class="input-label">ID</label>
+            <input type="text" class="input" name="id" value={{detailPost.id}}>
+        </div>
+        <div class="input-layout">
+            <label for="title" class="input-label">Title</label>
+            <input type="text" class="input" name="title" value="{{detailPost.title}}">
+        </div>
+        <div class="input-layout">
+            <label for="image" class="input-label">Image</label>
+            <input type="text" class="input" name="image" value={{detailPost.image}}>
+        </div>
+        <div class="input-layout">
+            <label for="desc" class="input-label">Description</label>
+            <input type="text" class="input" name="desc" value="{{detailPost.description}}">
+        </div>
+        <div class="input-layout">
+            <label for="content" class="input-label">Content</label>
+            <input type="text" class="input input-content" name="content" value="{{detailPost.content}}">
+        </div>
+
+        <div class="btn">
+            <button class="btn-add" type="submit" name="action" value="add">Add</button>
+            <button class="btn-update" type="submit" name="action" value="update">Update</button>
+            <button class="btn-remove" type="submit" name="action" value="remove">Remove</button>
+        </div>
+    </form>
+</div>

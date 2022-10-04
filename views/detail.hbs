@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+
+<div class="detail-layout">
+    <div class="post">
+        <div class="image">
+                <img src={{detailPost.image}} alt="Image">
+        </div>
+        <div class="info">
+            <h3 class="name">{{detailPost.title}}</h3>
+            <h4 class="content">{{detailPost.content}}</h4>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="title">Comment</div>
+
+        <form class="input-layout" method="POST">
+            <input type="text" placeholder="Write comment here" class="input-comment" name="value">
+            <button class="btn-comment">Send</button>
+        </form>
+
+        <ul class="comment-list">
+            {{#each commentPost}}
+                <li class="comment-item">
+                    <h3 class="item-name">{{this.auth}}</h3>
+                    <h3 class="item-content">{{this.content}}</h3>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

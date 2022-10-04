@@ -1,0 +1,136 @@
+.container {
+    width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.post-list {
+    width: 320px;
+}
+  
+  .post {
+    cursor: pointer;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .post + .post {
+    margin-top: 12px;
+  }
+  
+  .post-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+  }
+  
+  .post-img img {
+    width: 100px;
+    height: 80px;
+  }
+  
+  .post-content {
+    padding: 10px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-name {
+    font-size: 18px;
+    color: black;
+    flex: 5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .post-des {
+    font-size: 14px;
+    color: #333;
+    flex: 5;
+    margin: 0;
+    padding: 0;
+  }
+
+.info {
+    margin-top: 30px;
+    width: 650px;
+}
+
+.input-layout {
+    width: 100%;
+    display: flex;
+}
+
+.input-layout + .input-layout{
+    margin-top: 24px;
+}
+
+.input-label {
+    width: 100px;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.input {
+    flex: 1;
+    font-size: 16px;
+    height: 30px;
+    padding: 0 12px;
+}
+
+.input-content.input {
+    /* height: 120px;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-start; */
+    line-height: 1.8rem;
+    height: 3.6rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+
+.btn-add {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    border: none;
+}
+
+.btn-update {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    margin: auto;
+    border: none;
+}
+
+.btn-remove {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    margin: auto;
+}

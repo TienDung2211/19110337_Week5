@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<div class="container">
+  <div class="btn">
+    <a href="/manage" class="btn-manage">Manage Post</a>
+  </div>
+  
+  {{#if listExists}}
+    <div class="post-list">
+      {{#each listPost}}
+        <a class="post" href="/detail/{{this.id}}">
+          <div class="post-img">
+              <img src={{this.image}} alt="Image">
+          </div>
+          <div class="post-content">
+              <h3 class="post-name">{{this.title}}</h3>
+              <h4 class="post-des">{{this.description}}</h4>
+          </div>
+        </a>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
